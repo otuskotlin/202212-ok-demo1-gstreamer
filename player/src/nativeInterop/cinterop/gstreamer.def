@@ -1,0 +1,21 @@
+#headers = gst/gst.h gst/gstbin.h gst/gstpad.h gst/app/gstappsink.h stdio.h libavcodec/avcodec.h libavformat/avformat.h
+headers = gst/gst.h gst/gstpad.h
+
+compilerOpts = -D_POSIX_SOURCE
+#compilerOpts.linux = -pthread -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include -I/usr/include/x86_64-linux-gnu
+compilerOpts.linux = -pthread -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+linkerOpts.linux = -L/usr/lib/x86_64-linux-gnu -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstapp-1.0 -lavcodec
+
+---
+
+static inline GstMessageType getMessageTypeFor(GstMessage* msg) {
+  return GST_MESSAGE_TYPE (msg);
+}
+
+static inline gchar* getPadName(GstPad* pad) {
+  return GST_PAD_NAME(pad);
+}
+
+static inline void gstTime2Timespec(GstClockTime t, struct timespec *ts) {
+  GST_TIME_TO_TIMESPEC(t,*ts);
+}
