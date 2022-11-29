@@ -1,4 +1,4 @@
-package ru.otus.otuskotlin.player
+package ru.otus.otuskotlin.player.s2
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant

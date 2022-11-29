@@ -10,3 +10,9 @@ sudo apt install \
   libgstreamer-plugins-bad1.0-dev \
   libnice-dev
 ```
+
+## Gstreamer manual examples
+
+[Simple](https://gstreamer.freedesktop.org/documentation/tutorials/basic/hello-world.html?gi-language=c)
+
+[Probes](https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html?gi-language=c)

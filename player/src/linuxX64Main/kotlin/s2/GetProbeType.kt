@@ -1,4 +1,6 @@
-package ru.otus.otuskotlin.player
+package ru.otus.otuskotlin.player.s2
+
+import ru.otus.otuskotlin.player.*
 
 @Suppress("unused")
 fun getProbeType(type: GstPadProbeType): Set<String> {

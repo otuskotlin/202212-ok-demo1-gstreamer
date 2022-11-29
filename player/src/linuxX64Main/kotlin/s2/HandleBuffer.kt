@@ -1,7 +1,8 @@
-package ru.otus.otuskotlin.player
+package ru.otus.otuskotlin.player.s2
 
 import kotlinx.cinterop.*
 import kotlinx.datetime.Instant
+import ru.otus.otuskotlin.player.*
 
 fun handleBuffer(pd: CPointer<GstPad>?, probeInfo: CPointer<GstPadProbeInfo>?, userData: gpointer?): GstPadProbeReturn {
     if (probeInfo == null) {
@@ -36,9 +37,9 @@ fun handleBuffer(pd: CPointer<GstPad>?, probeInfo: CPointer<GstPadProbeInfo>?, u
         if (gst_buffer_map(buffer, this.ptr, GST_MAP_READ) == 1) {
             val imageSize = size.toInt()
 
-            @Suppress("UNUSED_VARIABLE")
+//            @Suppress("UNUSED_VARIABLE")
             // Raw Image as ByteArray
-            val image = data?.readBytes(imageSize) ?: throw Exception("Empty Data")
+//            val image = data?.readBytes(imageSize) ?: throw Exception("Empty Data")
 
             println("Buffer $capsStr\n${capsWith}x${capsHeight} size: $imageSize")
             gst_buffer_unmap(buffer, this.ptr)
