@@ -5,8 +5,8 @@ import ru.otus.otuskotlin.player.s2.play2
 import ru.otus.otuskotlin.player.s3.play3
 
 fun main() {
-//    play()
+    play()
 //    play2()
-    play3()
+//    play3()
 }
 

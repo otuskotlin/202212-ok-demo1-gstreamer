@@ -13,6 +13,8 @@ sudo apt install \
 
 ## Gstreamer manual examples
 
+[Cinterop Settings](https://gstreamer.freedesktop.org/documentation/frequently-asked-questions/developing.html?gi-language=c)
+
 [Simple](https://gstreamer.freedesktop.org/documentation/tutorials/basic/hello-world.html?gi-language=c)
 
 [Probes](https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html?gi-language=c)
